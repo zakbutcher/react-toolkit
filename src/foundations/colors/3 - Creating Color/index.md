@@ -9,7 +9,7 @@ Given a starting color (e.g. `#f00`) we can do a few simple transforms to genera
 
 But wait, doesn't that just give us the original palette? In this case, yes! This strategy works best when a Tertiary color is used to define a palette. Using a Primary or Secondary color will only yield 3 colors!
 
-Trying again, if we choose a different base (`#c09`), we can follow the same steps to get 3 colors!
+Trying again, if we choose a different base (`#c39`), we can follow the same steps to get 3 colors!
 
-- Create primary colors by rotating RGB channels: `#c09` -> `#9c0` -> `#09c`
-- Create secondary colors by reversing order & rotating: `#c90` -> `#0c9` -> `#90c`
+- Create primary colors by rotating RGB channels: `#c39` -> `#9c3` -> `#39c`
+- Create secondary colors by reversing order & rotating: `#c93` -> `#3c9` -> `#93c`
