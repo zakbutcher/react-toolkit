@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Flex, ColorSlice } from './components';
+import { Flex, ColorSlice } from '../components';
 
 const getVariableName = (splitName: string[]) => {
   if (splitName.length === 1) {

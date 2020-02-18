@@ -1,10 +1,9 @@
-export * from './color-theory';
-export * from './sass-palette';
-export * from './understanding-hex';
-export * from './creating-color';
-export * from './color-and-brand';
-export * from './brand-demo';
-export * from './colors';
+export * from './1 - Color Theory';
+export * from './2 - Understanding Hex';
+export * from './3 - Creating Color';
+export * from './4 - Sass Palette';
+export * from './5 - Color & Brand';
+export * from './6 - Brand Demo';
 
 export const colors = [
   'white',

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Flex, Heading } from './components';
+import { Flex, Heading } from '../components';
 
 export const ColorTheoryPhysical = () => (
   <Flex column center>

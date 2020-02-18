@@ -9,14 +9,11 @@ import {
   Terminology,
   ColorAndBrand,
   BrandThemeDemo,
-  Colors,
 } from '../src/foundations/colors';
 
 export default {
   title: 'Foundations',
 };
-
-export const colors = () => <Colors />;
 
 export const colorTheoryPhysical = () => <ColorTheoryPhysical />;
 colorTheoryPhysical.story = {
@@ -44,7 +41,7 @@ mixingRGB.story = {
 };
 export const sassPalette = () => <SassPalette />;
 sassPalette.story = {
-  name: "Let's get Sassy",
+  name: "Let's Get Sassy",
 };
 export const colorAndBrand = () => <ColorAndBrand />;
 colorAndBrand.story = {

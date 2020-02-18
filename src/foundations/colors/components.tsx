@@ -193,12 +193,12 @@ export const ListItem = styled.li`
 const getButtonColors = (props: IButton) => {
   if (props.secondary) {
     return `
-      border: 1px solid ${parseColorProp(props.color)};
+      border: 3px solid ${parseColorProp(props.color)};
       background-color: var(--white);
     `;
   }
   return `
-    border: 1px solid ${parseColorProp(props.color)};
+    border: 3px solid ${parseColorProp(props.color)};
     background-color: ${parseColorProp(props.color)};
   `;
 };

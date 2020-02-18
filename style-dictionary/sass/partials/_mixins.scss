@@ -8,7 +8,6 @@
   $base-grey: map-get($paletteSeed, 'grey');
   $base-primary: map-get($paletteSeed, 'primary');
   $shade-count: map-get($paletteSeed, 'shade-count');
-  $interval: math.floor(255 / $shade-count);
 
   $base: (
     'base': $base-grey,
@@ -21,8 +20,6 @@
   );
 
   $palette-diff: palette-diff($base);
-  @debug ($base);
-  @debug ($palette-diff);
   $grey-palette: create-palette($base-grey, $palette-diff);
 
   $palette: ();
@@ -39,7 +36,13 @@
 
   @for $i from 1 through $color-count {
     $color-name: color-#{$i};
-    $color: adjust-hue($base-primary, $interval * ($i - 1));
+    $hue-shift: $interval * ($i - 1);
+    @if ($hue-shift > 360) {
+      $hue-shift: $hue-shift - 360;
+    } @else if ($hue-shift < 0) {
+      $hue-shift: $hue-shift + 360;
+    }
+    $color: adjust-hue($base-primary, $hue-shift);
     $palette: map.merge(
       $palette,
       (#{$color-name}: create-palette($color, $palette-diff))

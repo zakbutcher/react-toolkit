@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { Flex, Heading, ColorSlice, Button } from './components';
+import { Flex, Heading, ColorSlice, Button } from '../components';
 
 export const ColorAndBrand = () => {
-  const TETRAD_SHIFT = 1;
+  const TETRAD_SHIFT = 3;
 
   const MAX_COLOR = 12;
   const MAX_SHADE = 7;
@@ -59,65 +59,65 @@ export const ColorAndBrand = () => {
       </Flex>
       <Heading bold>Complimentary Colors</Heading>
       <Flex stretch>
-        <ColorSlice color={`color-${color}-${shade}`} height={64} />
+        <ColorSlice color={`color-${color}-${shade}`} height={128} />
         <ColorSlice
           color={`color-${getColorWithOffset(color, MAX_COLOR / 2)}-${shade}`}
-          height={64}
+          height={128}
         />
       </Flex>
       <Heading bold>Analogous Colors</Heading>
       <Flex stretch>
         <ColorSlice
           color={`color-${getColorWithOffset(color, -1)}-${shade}`}
-          height={64}
+          height={128}
         />
-        <ColorSlice color={`color-${color}-${shade}`} height={64} />
+        <ColorSlice color={`color-${color}-${shade}`} height={128} />
         <ColorSlice
           color={`color-${getColorWithOffset(color, 1)}-${shade}`}
-          height={64}
+          height={128}
         />
       </Flex>
       <Heading bold>Triadic Colors</Heading>
       <Flex stretch>
-        <ColorSlice color={`color-${color}-${shade}`} height={64} />
+        <ColorSlice color={`color-${color}-${shade}`} height={128} />
         <ColorSlice
           color={`color-${getColorWithOffset(color, MAX_COLOR / 3)}-${shade}`}
-          height={64}
+          height={128}
         />
         <ColorSlice
           color={`color-${getColorWithOffset(color, (MAX_COLOR * 2) / 3)}-${shade}`}
-          height={64}
+          height={128}
         />
       </Flex>
-      <Heading bold>Split Complementary Colors</Heading>
+      <Heading bold>Split Complimentary Colors</Heading>
       <Flex stretch>
-        <ColorSlice color={`color-${color}-${shade}`} height={64} />
+        <ColorSlice color={`color-${color}-${shade}`} height={128} />
         <ColorSlice
           color={`color-${getColorWithOffset(color, MAX_COLOR / 2 + 1)}-${shade}`}
-          height={64}
+          height={128}
         />
         <ColorSlice
           color={`color-${getColorWithOffset(color, MAX_COLOR / 2 - 1)}-${shade}`}
-          height={64}
+          height={128}
         />
       </Flex>
       <Heading bold>Tetradic Colors</Heading>
       <Flex stretch>
-        <ColorSlice color={`color-${color}-${shade}`} height={64} />
+        <ColorSlice color={`color-${color}-${shade}`} height={128} />
         <ColorSlice
           color={`color-${getColorWithOffset(color, MAX_COLOR / 2)}-${shade}`}
-          height={64}
+          height={128}
         />
         <ColorSlice
           color={`color-${getColorWithOffset(color, TETRAD_SHIFT)}-${shade}`}
-          height={64}
+          height={128}
         />
         <ColorSlice
           color={`color-${getColorWithOffset(
             color,
             TETRAD_SHIFT + MAX_COLOR / 2
           )}-${shade}`}
-          height={64}
+          height={128}
         />
       </Flex>
     </Flex>

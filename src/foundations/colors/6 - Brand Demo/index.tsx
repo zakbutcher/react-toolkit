@@ -1,5 +1,7 @@
 import * as React from 'react';
-import { Flex, Heading, ColorSlice, Body, Subheading, Button } from './components';
+import { Flex, Heading, ColorSlice, Body, Subheading, Button } from '../components';
+
+type TPriority = 'primary' | 'secondary' | 'tertiary';
 
 export const BrandThemeDemo = () => {
   const MAX_COLOR = 12;
@@ -21,7 +23,7 @@ export const BrandThemeDemo = () => {
       setColor(nextColor);
     }
   };
-  const updateShade = (priority: string, change: number) => {
+  const updateShade = (priority: TPriority, change: number) => {
     const nextShade = shade[priority] + change;
     if (nextShade > MAX_SHADE) {
       setShade({ ...shade, [priority]: 1 });
@@ -41,13 +43,10 @@ export const BrandThemeDemo = () => {
     }
     return newColor;
   };
+
   const primaryColor = `color-${color}-${shade.primary}`;
-  const secondaryColor = `color-${getColorWithOffset(color, MAX_COLOR / 2 + 1)}-${
-    shade.secondary
-  }`;
-  const tertiaryColor = `color-${getColorWithOffset(color, MAX_COLOR / 2 - 1)}-${
-    shade.tertiary
-  }`;
+  const secondaryColor = `color-${getColorWithOffset(color, -1)}-${shade.secondary}`;
+  const tertiaryColor = `color-${getColorWithOffset(color, 1)}-${shade.tertiary}`;
   return (
     <Flex column center>
       <Flex stretch>

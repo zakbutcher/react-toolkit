@@ -8,7 +8,7 @@ import {
   Bold,
   List,
   ListItem,
-} from './components';
+} from '../components';
 
 export const UnderstandingHex = () => (
   <Flex column start>

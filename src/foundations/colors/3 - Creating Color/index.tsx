@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Flex, ColorSlice, Heading, ColorSwatch } from './components';
+import { Flex, ColorSlice, Heading, ColorSwatch } from '../components';
 
 const SHADE_COUNT = 3;
 const INTERVAL = Math.floor(255 / SHADE_COUNT);
@@ -7,8 +7,6 @@ let SHADES = [] as number[];
 for (let i = -1 * SHADE_COUNT; i <= SHADE_COUNT; i++) {
   SHADES.push(INTERVAL * i);
 }
-
-console.log('SHADES: ', SHADES);
 
 const getHexFromDecimal = (decimal: number) => {
   const hex = decimal.toString(16);
@@ -95,13 +93,13 @@ const getColorPaletteFromRgb = (rgb: IRGB) => {
       hex: `#${gHex}${bHex}${rHex}`,
     },
     {
-      hex: `#${rHex}${rHex}${bHex}`,
+      hex: `#${rHex}${bHex}${gHex}`,
     },
     {
-      hex: `#${rHex}${gHex}${rHex}`,
+      hex: `#${gHex}${rHex}${bHex}`,
     },
     {
-      hex: `#${gHex}${rHex}${rHex}`,
+      hex: `#${bHex}${gHex}${rHex}`,
     },
   ];
 };
@@ -128,7 +126,6 @@ export const MixingRGB = () => {
   }, [rgb.r, rgb.g, rgb.b]);
   const colorShades = generateColorPaletteShades(colors);
 
-  console.log('colorShades: ', colorShades);
   return (
     <Flex column>
       <Heading>Custom Palette</Heading>
